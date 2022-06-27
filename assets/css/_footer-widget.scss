@@ -1,0 +1,64 @@
+.footer-widget {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    @include responsive(md) {
+        margin-bottom: 60px;
+    }
+}
+.widget-head {
+    min-height: 20px;
+    img {
+        height: 16px;
+    }
+    h4 {
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 20px;
+        color : $primary-color;
+        text-transform: capitalize;
+    }
+}
+.widget-bottom {
+    margin-top: 20px;
+    P > a {
+        color: $primary-color;
+        display: inline-block;
+    }
+    p + p {
+        margin-top: 10px;
+    }
+    a {
+        display: block;
+        color: $secondary-color;
+        padding: 5px 0;
+        transition: all .3s;
+        text-transform: capitalize;
+        &:hover {
+            color : $primary-color;
+        }
+    }
+    .newsletter-form {
+        position: relative;
+        margin-top: 20px;
+        input {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 15px;
+            padding-right: 35px;
+            border-radius: 5px;
+            position: relative;
+            background: #eef1ec;
+        }
+        button {
+            height: 35px;
+            width: 35px;
+            border: none;
+            background: none;
+            position: absolute;
+            right: 0;
+            img {
+                margin-top: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.section-looking {
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.looking-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    align-items: center;
+    position: relative;
+    @include responsive(md){
+        justify-content: flex-end;
+    }
+    @include responsive(lg) {
+        padding-bottom: 25px;
+    }
+}
+.hand-wrap,
+.looking-content {
+    padding: 0 15px;
+}
+.hand-wrap {
+    overflow: hidden;
+    max-height: 485px;
+    width: 100%;
+    margin-bottom: 25px;
+    @include responsive(md) {
+        overflow: unset;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        margin-bottom: 0;
+    }
+    @include responsive(lg) {
+        position: relative;
+    }
+    img {
+        position: relative;
+        left: -5%;
+        bottom: -5px;
+        width: 100%;
+        @include responsive(md) {
+            left: -20%;
+        }
+    }
+}
+
+.section-looking .plan-list {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    @include responsive(sm){
+        margin-bottom: 45px;
+    }
+}

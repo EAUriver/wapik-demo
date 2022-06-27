@@ -1,0 +1,56 @@
+.mega-title {
+    margin: auto;
+    text-align: center;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+.mega-title--large {
+    max-width: 705px;
+}
+.mega-title__title {
+    font-size: 3.2rem;
+    color: $primary-color;
+    position: relative;
+    padding-bottom: 20px;
+    letter-spacing: -0.45px;
+    &:after {
+        content: "";
+        display: table;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 65px;
+        background-color: #6fb048;
+    }
+}
+.mega-title__desc {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.mega-title--modifier {
+    .mega-title__title {
+        color: #6fb048;
+    }
+    .mega-title__img {
+        margin-bottom: 20px;
+    }
+    .mega-title__link {
+        font-size: 1.8rem;
+        color: $primary-color;
+        font-weight: 500;
+        margin-top: 15px;
+        @include responsive(md) {
+            margin-top: 40px;
+        }
+    }
+}
+
+.mega-title--small {
+    .mega-title__title {
+        font-size: 2.2rem;
+    }
+}

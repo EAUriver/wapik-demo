@@ -1,0 +1,21 @@
+.content-section {
+    width: 100%;
+    margin-bottom: 15px;
+    @include responsive(md) {
+        width: 50%;
+    }
+}
+.content-title {
+    color: $primary-color;
+    font-size: 3.2rem;
+}
+.content-desc {
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+}
+.content-section--light {
+    .content-title, .content-desc {
+        color: #fff;
+    }
+}

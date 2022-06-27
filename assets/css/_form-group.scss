@@ -1,0 +1,30 @@
+.form-group {
+    overflow: hidden;
+    input {
+        height: 45px;
+        padding: 0 20px;
+        border: 1px solid $secondary-color;
+        font-size: 1.4rem;
+    }
+    textarea {
+        height: 125px;
+    }
+}
+.form-group + .form-group {
+    margin-top: 25px;
+}
+.invalid {
+    .form-message {
+        color: red;
+    }
+    input, textarea {
+        border-color: red;
+        background: #ffe7ed;
+    }
+}
+.form-label {
+    overflow: hidden;
+}
+.form-message {
+    overflow: hidden;
+}

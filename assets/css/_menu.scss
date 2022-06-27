@@ -1,0 +1,112 @@
+.header__nav-wrap {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    .btn {
+        border-radius: 5px;
+    }
+}
+
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__nav-link {
+    a {
+        padding: 10px 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-family: $btn-font;
+        color: #b3bfbf;
+        transition: all .3s;
+        position: relative;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .active {
+        color: #fff;
+    }
+}
+
+.nav-pc {
+    @include responsive(md) {
+        display: flex;
+    }
+}
+
+.nav-mobile {
+    position: fixed;
+    z-index: 1000;
+    min-width: 300px;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba($color: $primary-color, $alpha: .9);
+    transition: all .3s;
+    transform: translateX(100%);
+    .header__nav {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+.show-menu {
+    transform: translateX(0);
+}
+
+.scroll-disable {
+    margin: 0; height: 100%; overflow: hidden;
+    @include responsive(md) {
+        margin: auto;
+        height: auto;
+        overflow: unset;
+    }
+}
+
+.fixed-nav {
+    padding: 15px 5%;
+    position: fixed;
+    z-index: 1000;
+    top: -100%;
+    right: 0;
+    left: 0;
+    background: $primary-color;
+    animation: fixed-nav .6s ease forwards;
+    box-shadow: 0px 5px 8px rgba($color: #000, $alpha: .6);
+    border-bottom-color: transparent;
+    .logo-light {
+        display: block;
+    }
+    .logo-green {
+        display: none;
+    }
+    .header__nav-link {
+        a {
+            color: #b3bfbf;
+      
+            &:hover {
+                color: #fff;
+            }
+        }
+        .active {
+            color: #fff;
+        }
+    }
+    .phone-box p {
+        color: #b3bfbf;
+    }
+}

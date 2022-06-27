@@ -1,0 +1,61 @@
+.burger-wrap {
+    @include responsive(md) {
+        display: none;
+    }
+    position: relative;
+    z-index: 1100;
+}
+.burger {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #ccc;
+    border: 2px solid #ccc;
+    span {
+        position: relative;
+        background-color: #ccc;
+        height: 2px;
+        display: block;
+        width: 15px;
+        margin: 0 auto;
+        transition: all 0.3s;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 13px;
+            height: 0;
+            left: 1px;
+            top: 50%;
+            margin-top: -6px;
+            transition: all 0.3s;
+        }
+        &:before {
+			box-shadow: 0 12px 0 1px #ccc;
+		}
+		
+		&:after {
+			box-shadow: 0 0 0 1px #ccc;
+		}
+    }
+}
+.is-active {
+    span {
+        background-color: transparent;
+        &:before {
+            transform: rotate(-225deg);
+        }
+    
+        &:after {
+            transform: rotate(225deg);
+        }
+        
+        &:before,
+        &:after {
+            margin-top: 0;
+            box-shadow: 0 0 0 1px #ccc;
+        }
+    }
+}

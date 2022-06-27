@@ -1,0 +1,12 @@
+.section-pricing .plan-list {
+    margin-bottom: 30px;
+    li p {
+        flex-grow: 1;
+    }
+}
+.section-pricing .mega-title--modifier {
+    margin-bottom: 0;
+    @include responsive(md) {
+        margin-top: 25px;
+    }
+}

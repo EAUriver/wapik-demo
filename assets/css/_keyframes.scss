@@ -1,0 +1,10 @@
+@keyframes fixed-nav {
+    from {
+        opacity: 0;
+        top: -100%;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
