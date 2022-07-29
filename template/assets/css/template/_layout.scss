@@ -1,0 +1,122 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 5px;
+    @include responsive(sm){
+        max-width: 540px;
+    } 
+    @include responsive(md){
+        padding: 0 10px;
+        max-width: 720px;
+    }
+    @include responsive(lg){
+        padding: 0 15px;
+        max-width: 960px;
+    }
+    @include responsive(xl){
+        max-width: 1140px;
+    }
+}
+.container-fluid {
+    max-width: none;
+}
+
+section {
+    padding: 40px 0;
+    @include responsive(md) {
+        padding: 80px 0;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 -5px;
+    @include responsive(md){
+        margin: 0 -10px;
+        flex-direction: row;
+    }
+    @include responsive(lg){
+        margin: 0 -15px;
+    }
+}
+.row-alway {
+    flex-direction: row;
+}
+.row-center {
+    @include responsive(md) {
+        justify-content: center;
+    }
+}
+
+.col {
+    padding: 0 15px;
+    width: 100%;
+    flex: 1 1 0;
+}
+
+// Make a col
+$base-col: 12;
+@include responsive(sm) {
+    @for $i from 1 through $base-col {
+        .col-sm-#{$i} {
+            width: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(md) {
+    @for $i from 1 through $base-col {
+        .col-md-#{$i} {
+            width: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(lg) {
+    @for $i from 1 through $base-col {
+        .col-lg-#{$i} {
+            width: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(xl) {
+    @for $i from 1 through $base-col {
+        .col-xl-#{$i} {
+            width: percentage($i/$base-col);
+        }
+    }
+}
+div[class ^= 'col col-'] {
+    flex: 1 1 auto;
+}
+// Make a col offset
+$base-col: 12;
+@include responsive(sm) {
+    @for $i from 1 through $base-col {
+        .col-sm-offset-#{$i} {
+            margin-left: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(md) {
+    @for $i from 1 through $base-col {
+        .col-md-offset-#{$i} {
+            margin-left: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(lg) {
+    @for $i from 1 through $base-col {
+        .col-lg-offset-#{$i} {
+            margin-left: percentage($i/$base-col);
+        }
+    }
+}
+@include responsive(xl) {
+    @for $i from 1 through $base-col {
+        .col-xl-offset-#{$i} {
+            margin-left: percentage($i/$base-col);
+        }
+    }
+}

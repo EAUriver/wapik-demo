@@ -1,0 +1,35 @@
+/*
+Thuộc tính định nghĩa tại block:
+    display: flex | inline-flex
+    flex-direction: row | column                        [xoay trục hoặc đảo hướng main axis]
+    flex-wrap: no-wrap | wrap | wrap-reverse            [đảo hướng cross axis qui định item xuống, lên dòng]
+    align-items: flex-start | flex-end | center         [theo hướng của cross axis căn chỉnh vị trí items]
+
+    justify-content: main-start | main-end | center | space-between | space-around | space-evenly
+    align-content: cross-start | cross-end | center | space-between | space-around | space-evenly         
+
+Thuộc tính định nghĩa tại element:
+    flex-basis: length
+    flex-grow: number
+    flex-shink: number
+    justify-self: main-start | main-end | center | ...
+    align-self: dùng như align-items
+    order: (number) [theo hướng của main axis giá trị order nhỏ nhất sẽ đặt ở main start]
+
+Shorthand: 
+    1:
+        flex-bacis: 1;              <=>        flex: 1 [item chiếm full khoảng trống còn lại]
+        flex-grow: 1;
+        flex-shrink: 1;
+    2:
+        flex-direction: row;        <=>        flex-flow: row wrap
+        flex-wrap: wrap;
+
+
+Note:
+    width: 100px;
+    flex-shrink: 0; 
+
+    set width rồi đặt flex-shrink: 0 để cố định kích thước giúp item không bị co lại khi resize
+*/
+

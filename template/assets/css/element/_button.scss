@@ -1,0 +1,42 @@
+button, .btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $thirdly-font;
+  font-size: 1.4rem;
+  line-height: 1;
+
+  border: 1px solid transparent;
+  border-radius: 3px;
+  
+  padding: 7.5px 15px;
+  min-width: 115px;
+}
+
+.btn-size-l {
+  padding: 15px 30px;
+  font-size: 1.6rem;
+}
+.btn-size-s {
+  padding: 3.75px 7.5px;
+  font-size: 1.2rem;
+  font-size: 1.2rem;
+}
+
+// btn style
+.btn-primary {
+  background-color: $success-color;
+  color: $light-color;
+  &:hover {
+    background-color: $light-color;
+    color: $success-color;
+    border-color: $success-color;
+  }
+}
+
+

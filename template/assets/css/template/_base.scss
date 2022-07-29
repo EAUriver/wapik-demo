@@ -1,0 +1,50 @@
+* {
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  appearance: none;  // Bỏ thuộc tính mặc định của trình duyệt cho 1 tag
+} html {
+font-size: 62.5%;
+line-height: 1.5;
+font-weight: 400;
+font-family: $primary-font;
+color: $secondary-color;
+} body {
+  font-size: 1.4rem;  /* rem = 16px dựa theo html còn em dựa theo block chứa */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  appearance: none;
+  font-weight: 400;
+  line-height: 1;
+  word-break: break-word;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  img {
+    line-height: 0;
+  }
+}
+
+::placeholder {
+  color: $secondary-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.map {
+  filter: grayscale(100%) invert(92%) contrast(83%);
+  height: 400px;
+  width: 100%;
+}

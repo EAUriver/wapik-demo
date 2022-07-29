@@ -1,0 +1,56 @@
+input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: $secondary-color;
+}
+input[name="name"] {
+    text-transform: capitalize;
+}
+textarea {
+    color: $secondary-color;
+    width: 100%;
+    padding: 15px 20px;
+    border-color: $secondary-color;
+    border-radius: 0;
+    outline: none;
+    resize: none;
+    font-size: 1.4rem;
+}
+
+
+
+.form-group {
+    overflow: hidden;
+    input {
+        height: 45px;
+        padding: 0 20px;
+        border: 1px solid $secondary-color;
+        font-size: 1.4rem;
+    }
+    textarea {
+        height: 125px;
+    }
+}
+.form-group + .form-group {
+    margin-top: 25px;
+}
+.invalid {
+    .form-message {
+        color: red;
+    }
+    input, textarea {
+        border-color: red;
+        background: #ffe7ed;
+    }
+}
+.form-label {
+    overflow: hidden;
+}
+.form-message {
+    overflow: hidden;
+}

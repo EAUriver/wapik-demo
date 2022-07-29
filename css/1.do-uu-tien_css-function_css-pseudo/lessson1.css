@@ -1,0 +1,50 @@
+/*
+Độ ưu tiên trong CSS
+    Internal, External:  Viết tại file xxx.css hay tại HTML có độ ưu tiên như nhau tùy theo thứ tự khai báo sẽ quyết định thứ tự ưu tiên.
+    Inline: 1000 Point
+    #id: 100 Point
+    .class: 10 Point
+    tag: 1 Point
+    Equal specificity: ghi đè code đã định dạng -> nhận code mới
+    Universal selector and inherited: Các thuộc tính được khai báo chung như *{} hoặc thuộc tính được kế thừa.
+
+    Độ ưu tiên trong css dựa theo số điểm. Số điểm của selector càng cao thì dòng code viết tại đó sẽ được ưu tiên vượt qua các selector khác.
+        VD: #id.class = 110 (Điểm có thể cộng dồn 100 + 10 = 110)
+    !important tăng điểm lên max chỉ có thể bị vượt qua khi có một !important khác viết ở phía sau nếu hai !important ngang hàng thì lại xét điểm
+==========================================================================================================================
+Đơn vị trong CSS
+    Absolute units: px
+    Relative unist: %, vw, vh, rem, em
+    Font-size: 100% (Khi viết thế này trình duyệt mặc định hiểu là font-size: 16px )
+    rem: Phụ thuộc vào thuộc tính font-size được định nghĩa tại thẻ html{} trong CSS
+    VD: 
+        html {font-size: 20px}
+        p {font-size: 1rem} (1rem = 20px)
+    em: Phụ thuộc vào thuộc tính font-size được định nghĩa tại thẻ gần nhất chứa nó trong CSS
+    VD:
+        father#father.father {font-size: 20px}
+        p {font-size: 1em} (1em = 20px)
+==========================================================================================================================
+CSS Function
+    var()
+    linear-gradient()
+    rgba()
+    rgb()
+    calc()
+    attr(): Lấy data qua attribute đã khai báo tại thẻ HTML
+    ...vv
+==========================================================================================================================
+CSS pseudo-classes
+    :root
+    :hover
+    :active
+    :first-child
+    :last-child
+    ...vv
+CSS pseudo-element
+    ::after
+    ::before
+    ::first-letter
+    ::placeholder
+    ...vv
+*/
