@@ -1,5 +1,5 @@
 Cài đặt git:
-	Tạo 1 folder "wapik" mở ra rồi "git bash here"
+	Tạo 1 folder "git" mở ra rồi "git bash here"
 		Ta cấu hình tên và email cho git:
 			git config --global user.name "EUAriver"
 			git config --global user.email "nguyenkiengiangfe@gmail.com"
