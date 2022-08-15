@@ -21,7 +21,6 @@ Tạo repository:
 			   git add index.css layout.css 		//add more
 			   git add . 							//add all
 			7. git commit -m "some	thing"
-			
 
 		Khởi tạo git repo trên github sau đó:
 			8.  git remote add origin https://github.com/EAUriver/wapik-demo.git
@@ -33,3 +32,4 @@ Kiểm tra commit: git log
 Kiểm tra branch: git branch
 Tạo branch mới: git checkout -b sub-branch
 Xóa branch: git branch -d sub-branch
+Push code lên branch: git push origin <branch name>
